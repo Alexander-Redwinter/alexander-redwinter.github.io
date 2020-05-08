@@ -1,0 +1,44 @@
+﻿body {
+    margin: 0;
+    background-color: darkslateblue;
+}
+
+.section {
+    perspective: 1000px;
+}
+
+.container {
+    width: 700px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: 1s;
+    transform: rotateX(55deg) rotateZ(-45deg) rotateY(10deg);
+    transform-style: preserve-3d;
+}
+
+.container-origin {
+    transform: rotate(0);
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card {
+    background-color: aliceblue;
+    width: 200px;
+    text-align: center;
+    height: 355px;
+    margin: 10px;
+    transition: 0.5s;
+}
+
+    .card:hover {
+        cursor: pointer;
+        transform: translateZ(20px);
+    }
