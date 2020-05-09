@@ -1,44 +1,112 @@
-﻿body {
+﻿@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+    background-image:url("../img/bg.jpg");
+    background-size:cover;
     margin: 0;
-    background-color: darkslateblue;
+    overflow: hidden;
+    background-color: darkblue;
 }
 
 .section {
-    perspective: 1000px;
+    perspective: 3000px;
+
 }
 
 .container {
-    width: 700px;
     margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    padding: 10vh;
+    height: 80vh;
+    width: 1000px;
     transition: 1s;
-    transform: rotateX(55deg) rotateZ(-45deg) rotateY(10deg);
+    transform: rotateX(70deg) rotateZ(-45deg) rotateY(0deg);
     transform-style: preserve-3d;
 }
+
 
 .container-origin {
     transform: rotate(0);
 }
 
+.pointer:hover {
+    cursor: pointer;
+}
+
 img {
     max-width: 100%;
-    max-height: 100%;
+}
+
+.big-card {
+    grid-column: span 2 / auto;
+    grid-row: span 2 / auto;
+    background-color: aliceblue;
+    text-align: center;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.container-origin .big-card:hover {
+    z-index:1;
+}
+
+
+.grid {
+    width: 80vw;
+    height: 80vh;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(2,2fr);
 }
 
 .card {
     background-color: aliceblue;
-    width: 200px;
     text-align: center;
-    height: 355px;
-    margin: 10px;
     transition: 0.5s;
+
+    overflow: hidden;
 }
 
-    .card:hover {
-        cursor: pointer;
-        transform: translateZ(20px);
+.glow:hover {
+    transform: translateZ(1px);
+    box-shadow: 0 0 10px 5px #fff9,
+        0 0 30px 10px #f0f9;
+}
+
+.header{
+    height:30%;
+    width:100%;
+    overflow:hidden;
+}
+
+.logo {
+    z-index: 1;
+    line-height: 5vh;
+    width: 15vw;
+    height: 5vh;
+    background-color: #32a851;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    box-shadow: 0 0 5px 5px #0004;
+}
+    .logo a {
+        color: aliceblue;
+        font-family: 'Roboto',sans-serif;
+        text-decoration:none;
     }
+
+.help-text {
+    position: absolute;
+    color: aliceblue;
+    font-family: 'Roboto',sans-serif;
+    font-size: 10vh;
+    transform: rotateX(-90deg) translateZ(-60px) translateY(-30px);
+}
+
+.hidden{
+    visibility:hidden;
+}
+
