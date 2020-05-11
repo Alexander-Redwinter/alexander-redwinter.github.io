@@ -3,6 +3,8 @@ $(document).ready(function () {
         document.location = "mobile.html";
     }
 
+
+
     $('.container').on('click', function () {
         $(this).addClass('container-origin');
         $(this).removeClass('pointer');
@@ -13,3 +15,12 @@ $(document).ready(function () {
 
 
 });
+
+function select_language(language) {
+    $("[lang]").each(function () {
+        if ($(this).attr("lang") == language)
+            $(this).css('display', 'initial');
+        else
+            $(this).hide();
+    });
+}
