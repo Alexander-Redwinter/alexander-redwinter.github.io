@@ -9,10 +9,18 @@
 
 body {
     margin: 0;
-    background-color: darkblue;
+    background-color: darkslategray;
     font-family: 'Roboto',sans-serif;
+}
+p{
+    color:aliceblue;
+    margin:5vw;
+}
+
+.main {
     background-image: url("../img/bg.jpg");
     background-size: cover;
+    overflow:hidden;
 }
 
 span{
@@ -26,6 +34,8 @@ h1 {
     font-size: 5vh;
     color: darkslategrey;
 }
+
+
 .hide-overflow {
     overflow: hidden;
 }
@@ -125,6 +135,7 @@ form {
     width: 100%;
     overflow: hidden;
     border-bottom: solid grey;
+    background-color: var(--dark-green);
 }
 
 .footer {
@@ -212,17 +223,13 @@ form {
 
 
 
-
-
-
-
 .help-text {
+    color: aliceblue;
     position: absolute;
     transform: rotateX(-90deg) translateZ(-60px) translateY(-30px);
 }
-    .help-text h1 {
+    .help-text * {
         color: aliceblue;
-        font-size: 10vh;
     }
 
 .visible {
